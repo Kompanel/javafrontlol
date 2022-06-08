@@ -40,8 +40,8 @@ const Statistics = ({ stat, characterData, setCharacterData }) => {
     return (
         <div className="inner-statistic-container">
             <h3>{stat}</h3>
-            <p>{characterData[stat]}</p>
-            <button onClick={handleIncrementingStat}>Increment stat</button>
+            <p className="statistics-value">{characterData[stat]}</p>
+            <button className="statistic-button" onClick={handleIncrementingStat}>Increment stat</button>
             <p className="message">{message}</p>
         </div>
     );

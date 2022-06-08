@@ -11,14 +11,21 @@
 }
 
 .statistic-container {
-    display: grid;
-    grid-template-column: 1/6 1/6 1/6 1/6 1/6 1/6
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: relative;
 }
 
 .inner-statistic-container {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    gap: 30px;
+    border: solid gray 2px;
+    border-radius: 5px;
+    padding: 15px;
+    background: #D3D3D3;
 }
 
 .character-navbar-element {
@@ -82,4 +89,23 @@
 
 .message {
     position: absoulute;
+}
+
+h3, p {
+    text-align: center;
+    background: #D3D3D3;
+}
+
+.statistics-value {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.statistic-button {
+    height: 30px;
+    border: none;
+    background: gray;
+    color: white;
+    border-radius: 10px;
+    align-self:center;
 }
