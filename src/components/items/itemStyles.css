@@ -1,0 +1,31 @@
+.item-image {
+    height: 50px;
+    align-self: center;
+}
+
+.inner-item-container {
+    display: flex;
+    height: 70%;
+    gap: 5px;
+    justify-content: space-between;
+    padding: 5px 20px;
+}
+
+.upgrade-button {
+    height: 50px;
+    border: none;
+    background: gray;
+    color: white;
+    border-radius: 10px;
+    align-self:center;
+}
+
+.outer-item-container {
+    border: solid gray 1px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+h2 {
+    font-size: 1.7rem;
+}

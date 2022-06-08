@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 
 import axios from "../../common/axios";
 import { UserContext } from "../../common/UserContext";
+import capeImage from "../../common/assets/cape.png";
 
 const Cape = ({ cape, setCharacterData }) => {
     const { user } = useContext(UserContext);
@@ -33,9 +34,15 @@ const Cape = ({ cape, setCharacterData }) => {
     };
 
     return (
-        <div>
-            {JSON.stringify(cape, null, 2)}
-            <button onClick={handleUpgradingItem}>Upgrade item</button>
+        <div class="outer-item-container">
+            <div className="inner-item-container">
+            <img className="item-image" src={capeImage} alt=""/>
+            <div>
+                <h2>{cape.name}</h2>
+            <h2>level: {cape.level}</h2>
+            </div>
+            <button className="upgrade-button" onClick={handleUpgradingItem}>Upgrade item</button>
+            </div>
             <div>{message}</div>
         </div>
     );
