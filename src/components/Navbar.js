@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
+import "./componentStyles.css"
 import { UserContext } from "../common/UserContext";
 import emptyUserObject from "../common/emptyUserObject";
 
@@ -14,8 +15,8 @@ const Navbar = () => {
     };
     
     return (
-        <nav>
-            <button onClick={handleLogout}>Logout</button>
+        <nav className="navbar-logout">
+            <button className="navar-logout-element" onClick={handleLogout}>Logout</button>
         </nav>
     );
 };

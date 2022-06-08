@@ -1,0 +1,85 @@
+.container {
+    margin: 10px;
+}
+
+.character-navbar {
+    position: relative;
+    background: gray;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.statistic-container {
+    display: grid;
+    grid-template-column: 1/6 1/6 1/6 1/6 1/6 1/6
+}
+
+.inner-statistic-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.character-navbar-element {
+    background: gray;
+    color: white;
+    text-decoration: none;
+    margin: 5px 30px;
+}
+.navbar-logout {
+    width: 100%;
+    background: gray;
+}
+
+.navbar-logout-element {
+    background: gray;
+    border: none;
+}
+
+.avatar-image {
+    width: 250px;
+    margin: 10px;
+    border: solid gray 4px;
+    border-radius: 5px;
+    background: black;
+}
+
+.character-data-container {
+    display: flex;
+}
+
+.character-item-container {
+    width: 100%;
+    display: grid;
+    padding: 10px;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+    "first second"
+    "third fourth";
+}
+
+.first-item {
+    grid-area: first;
+    height: 50%;
+}
+
+.second-item {
+    grid-area: second;
+    height: 50%;
+}
+
+.third-area {
+    height: 50%;
+    grid-area: third;
+}
+
+.fourth-area {
+    height: 50%;
+    grid-area: fourth;
+}
+
+.message {
+    position: absoulute;
+}

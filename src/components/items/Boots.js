@@ -2,6 +2,8 @@ import React, {useState, useContext} from "react";
 
 import axios from "../../common/axios";
 import { UserContext } from "../../common/UserContext";
+import bootsImage from "../../common/assets/boots.png";
+import "./itemStyles.css"
 
 const Boots = ({ boots, setCharacterData }) => {
     const { user } = useContext(UserContext);
@@ -33,9 +35,15 @@ const Boots = ({ boots, setCharacterData }) => {
     };
 
     return (
-        <div>
-            {JSON.stringify(boots, null, 2)}
-            <button onClick={handleUpgradingItem}>Upgrade item</button>
+        <div class="outer-item-container">
+            <div className="inner-item-container">
+            <img className="item-image" src={bootsImage} alt=""/>
+            <div>
+                <h2>{boots.name}</h2>
+            <h2>level: {boots.level}</h2>
+            </div>
+            <button className="upgrade-button" onClick={handleUpgradingItem}>Upgrade item</button>
+            </div>
             <div>{message}</div>
         </div>
     );
