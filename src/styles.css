@@ -2,3 +2,7 @@
     position: absolute;
     right: 0;
 }
+
+.quest-pick-container {
+    display: flex;
+}

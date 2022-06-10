@@ -65,3 +65,29 @@ h5 {
     font-weight: 600;
     background-color: inherit;
 }
+
+.quest-pick-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.quest-title {
+    text-align: center;  
+}
+
+.quest-coundown-container{
+    width: 30%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.quest-container {
+    border: solid black 1px;
+    border-radius: 10px; 
+}
+
+
+h1, h4{
+    text-align: center;
+}

@@ -3,6 +3,7 @@ import React, { useEffect, useState, useContext } from "react";
 import axios from "../common/axios";
 import { UserContext } from "../common/UserContext";
 import CharacterNavbar from "../components/CharacterNavbar";
+import "../styles.css";
 
 const QuestPage = ({ characterData, setCharacterData }) => {
     const { user } = useContext(UserContext);
@@ -91,16 +92,25 @@ const QuestPage = ({ characterData, setCharacterData }) => {
     }
 
     const questsToPickSection = proposedQuestsData.map((q) => (
-        <div style={{ border: "1px solid black" }} key={q.id} onClick={() => handlePickingQuest(q.duration)}>
-            {JSON.stringify(q)}
+        <div className="quest-continer" key={q.id} onClick={() => handlePickingQuest(q.duration)}>
+                <div>
+                    <h1 className="quest-title">Quest</h1><br></br>
+                    <h2>duration: {q.duration}</h2>
+                    <h3>gold: {q.gold}</h3>
+                    {q.collectibleItem && <h4>{q.collectibleItem.name}, amount: {q.amountOfItems}</h4>}
+                </div>
         </div>
     ));
+
 
     return (
         <div>
             <CharacterNavbar />
-            {renderState === 1 && <>{questsToPickSection}</>}
-            {renderState === 2 && <>{countDown}</>}
+            {renderState === 1 && <div className="quest-pick-container">{questsToPickSection}</div>}
+            {renderState === 2 && <div className="quest-coundown-container">
+            <h1 >Pozostało: </h1>
+            <h4>{countDown} sekund</h4>
+        </div>}
         </div>
     );
 };
